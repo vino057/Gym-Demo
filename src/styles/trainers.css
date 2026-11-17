@@ -1,0 +1,203 @@
+
+.trainers-page {
+  background: var(--bg);
+}
+
+.trainers-hero {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.92), rgba(0,0,0,.35)),
+    url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85') center/cover;
+}
+
+.trainers-hero-content {
+  padding-top: 55px;
+}
+
+.trainers-hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(50px, 7vw, 85px);
+  color: white;
+  line-height: 1;
+  margin: 20px 0;
+}
+
+.trainers-hero h1 span,
+.trainers-heading h2 span,
+.trainers-cta h2 span {
+  color: var(--gold);
+}
+
+.trainers-hero-content > div > p:last-child {
+  max-width: 470px;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.trainers-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.trainers-heading h2,
+.trainers-cta h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(35px, 5vw, 55px);
+  color: white;
+  margin-top: 12px;
+}
+
+.trainers-heading > p {
+  max-width: 350px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.trainer-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: .3s ease;
+  overflow: hidden;
+}
+
+.trainer-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-7px);
+}
+
+.trainer-image {
+  height: 330px;
+  position: relative;
+  overflow: hidden;
+}
+
+.trainer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.8);
+  transition: .5s ease;
+}
+
+.trainer-card:hover .trainer-image img {
+  transform: scale(1.07);
+}
+
+.trainer-experience {
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  background: rgba(0,0,0,.8);
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: .5px;
+}
+
+.trainer-arrow {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  background: var(--gold);
+  color: #000;
+  transition: .3s;
+}
+
+.trainer-arrow:hover {
+  background: white;
+  transform: rotate(45deg);
+}
+
+.trainer-info {
+  padding: 22px 18px;
+}
+
+.trainer-role {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.trainer-info h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 25px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.trainer-specialty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.trainer-specialty svg {
+  color: var(--gold);
+}
+
+.trainers-cta {
+  padding: 85px 20px;
+  text-align: center;
+  background:
+    linear-gradient(rgba(0,0,0,.88), rgba(0,0,0,.9)),
+    url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1600&q=85') center/cover;
+}
+
+.trainers-cta > div > p:not(.section-label) {
+  color: var(--muted);
+  margin: 15px 0 30px;
+  font-size: 14px;
+}
+
+.trainers-cta .primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media(max-width: 1000px) {
+  .trainers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 600px) {
+  .trainers-hero {
+    min-height: 350px;
+  }
+
+  .trainers-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .trainers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trainer-image {
+    height: 380px;
+  }
+}

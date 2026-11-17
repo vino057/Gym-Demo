@@ -1,0 +1,225 @@
+
+.about-page {
+  background: var(--bg);
+}
+
+.about-hero {
+  min-height: 430px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.9), rgba(0,0,0,.35)),
+    url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85') center/cover;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, var(--bg), transparent 45%);
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 60px;
+}
+
+.about-hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(55px, 8vw, 100px);
+  line-height: .95;
+  margin: 18px 0;
+  color: white;
+}
+
+.about-hero h1 span,
+.about-intro-content h2 span,
+.about-section-heading h2 span {
+  color: var(--gold);
+}
+
+.about-hero-content > p:last-child {
+  max-width: 500px;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.about-image {
+  position: relative;
+  min-height: 430px;
+}
+
+.about-image img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  filter: brightness(.8);
+}
+
+.about-image-label {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  background: rgba(0,0,0,.85);
+  border-left: 3px solid var(--gold);
+  padding: 15px 22px;
+}
+
+.about-image-label span {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.about-image-label p {
+  color: white;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+.about-intro-content h2,
+.about-section-heading h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(35px, 5vw, 55px);
+  line-height: 1.05;
+  margin: 15px 0 25px;
+  color: white;
+}
+
+.about-intro-content > p:not(.section-label) {
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.about-check-list {
+  margin-top: 25px;
+  display: grid;
+  gap: 15px;
+}
+
+.about-check-list p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-size: 13px;
+}
+
+.about-check-list svg {
+  color: var(--gold);
+  width: 18px;
+}
+
+.about-features {
+  background: var(--surface);
+}
+
+.about-section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-section-heading > p:last-child {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.about-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.about-feature-card {
+  padding: 30px 24px;
+  background: #191919;
+  border: 1px solid var(--border);
+  transition: .3s ease;
+}
+
+.about-feature-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--gold);
+}
+
+.about-feature-icon {
+  color: var(--gold);
+  margin-bottom: 25px;
+}
+
+.about-feature-card h3 {
+  color: white;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.about-feature-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.about-quote {
+  padding: 90px 20px;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.9)),
+    url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1600&q=85') center/cover;
+}
+
+.about-quote p {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(27px, 5vw, 48px);
+  color: white;
+  font-weight: 700;
+}
+
+.about-quote span {
+  display: block;
+  margin-top: 20px;
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+@media(max-width: 900px) {
+  .about-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 550px) {
+  .about-hero {
+    min-height: 350px;
+  }
+
+  .about-image,
+  .about-image img {
+    min-height: 300px;
+    height: 300px;
+  }
+
+  .about-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-quote {
+    padding: 65px 20px;
+  }
+}
